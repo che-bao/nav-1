@@ -128,10 +128,22 @@ var hashMap = xObject || [{
 }, {
   logo: 'B',
   url: 'https://www.bilibili.com/'
+}, {
+  logo: 'G',
+  url: 'https://github.com/'
+}, {
+  logo: 'I',
+  url: 'https://www.iconfont.cn/'
+}, {
+  logo: 'F',
+  url: 'https://www.figma.com/'
+}, {
+  logo: 'B',
+  url: 'https://www.bootcdn.cn/'
 }];
 
 var simplifyUrl = function simplifyUrl(url) {
-  return url.replace('https://', '').replace('http://', '').replace('www.', '').replace(/\/.*/, ''); //删除/开头的内容
+  return url.replace('https://', '').replace('http://', '').replace('www.', '').replace('.com', '').replace('.cn', '').replace('.org', '').replace('.net', '').replace('.io', '').replace(/\/.*/, ''); //删除/开头的内容
 };
 
 var render = function render() {
@@ -184,4 +196,4 @@ $(document).on('keypress', function (e) {
   }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.8997575f.js.map
+//# sourceMappingURL=main.ac48d4c1.js.map

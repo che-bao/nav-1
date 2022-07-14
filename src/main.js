@@ -1,6 +1,3 @@
-
-
-
 const $siteList = $('.siteList')
 const $lastLi = $siteList.find('li.last')
 const x = localStorage.getItem('x')
@@ -8,13 +5,22 @@ const xObject = JSON.parse(x)
 
 const hashMap = xObject || [
     {logo:'A',url:'https://www.acfun.cn/'},
-    {logo:'B',url:'https://www.bilibili.com/'}
+    {logo:'B',url:'https://www.bilibili.com/'},
+    {logo:'G',url:'https://github.com/'},
+    {logo:'I',url:'https://www.iconfont.cn/'},
+    {logo:'F',url:'https://www.figma.com/'},
+    {logo:'B',url:'https://www.bootcdn.cn/'}
 ]
 
-const simplifyUrl = (url) =>{
+const simplifyUrl = (url) =>{       
     return url.replace('https://','')
     .replace('http://','')
     .replace('www.','')
+    .replace('.com','')
+    .replace('.cn','')
+    .replace('.org','')
+    .replace('.net','')
+    .replace('.io','')
     .replace(/\/.*/,'') //删除/开头的内容
 }
 
